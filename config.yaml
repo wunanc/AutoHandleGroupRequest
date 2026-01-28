@@ -1,0 +1,27 @@
+# QQ群自动审核配置
+bot:
+  # 使用您在图片中配置的WebSocket服务器地址
+  websocket_url: "ws://127.0.0.1:3100"
+  # 使用您在图片中配置的Token
+  access_token: "1234"
+
+rules:
+  # QQ等级要求
+  min_qq_level: 5
+  # 是否启用QQ等级检查功能
+  enable_level_check: true
+
+# 关键词列表
+keywords:
+  # 包含这些关键词自动拒绝
+  reject:
+    - "我要验牌"
+    
+  # 包含这些关键词自动同意
+  approve:
+    - "牌没有问题"
+
+# 群聊白名单
+# 只处理这些群聊的加群申请，如果为空则处理所有群聊
+group_whitelist:
+  - 114514
